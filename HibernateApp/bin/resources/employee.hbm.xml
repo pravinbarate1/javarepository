@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<class name="com.pravin.hibernate.EmpBean" table="EMPLOYEE">
+		<id name="eid" column="EID">
+			<generator class="com.pravin.hibernate.CustomGenerator">
+			</generator>
+		</id>
+		<timestamp name="timeStamp" column="TIME_TRACKER"></timestamp>
+		<property name="fName" column="FIRSTNAME"/>
+		<property name="lName" column="LASTNAME"/>
+		<property name="mail" column="EMAIL"/>
+	</class>
+</hibernate-mapping>
